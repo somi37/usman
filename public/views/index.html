@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <!-- load bootstrap -->
 
+
   <!-- SPELLS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -27,10 +28,75 @@
 
   <!-- APP SPECIFIC JS FILES -->
   <script src="/js/index.js"></script>
+  <style type="text/css">
+   body{
+    background-color: #f6f4f4;
+     //  margin: 20px;
+       // padding: 40px;
+       text-align: center;
+   }
+   .container{
+    position: relative;
+    display: inline-block;
+    background-color: #cdf1f4;
+    width: 6000px; 
+    margin: 20px ; 
+    padding: 10px; 
+   // align-items: center;
+   }
+   header{
+    text-align: left;
+   }
+   img{
+    width: 150px;
+    height: 120px;
+    margin: 0px;
+    text-align: left;
+
+   }
+   h1{
+    //display: inline-block;
+    text-align: left;
+    padding-top: 40px
+   }
+   p{
+    padding-top: 20px;
+    text-align: left;
+    font-size: 20px;
+
+
+   }
+   a{
+    display: inline-block;
+    text-align: right;
+    padding-left: 800px;
+    font-size: 20px;
+   }
+   #csvi{
+    padding-right: 350px;
+   }
+   .row-fluid{
+    text-align: left;
+   }
+    
+  </style>
 </head>
 
 <body ng-controller="mainController">
-  <div class="container" style="width: 700px; margin: 0 auto;">
+
+  <div class="container">
+  <header>
+  <img src="//static1.squarespace.com/static/565ee3b6e4b0f18e76b9f7a9/t/565ee5cde4b0c49af4b10b28/1487850682744/?format=300w" alt = "Ml logo">
+   <a href="https://www.marketlytics.com">Marketlytics</a>
+    <h1>Segment-Import</h1>
+   
+    <p>Easily import historic data to segment by uploading a csv</p>
+    <p>Instructions:</p>
+    <p1>Read Here!</p1>
+
+
+  </header>
+ 
     <div class="row-fluid">
       <br><br>
       <div role="form">
@@ -39,7 +105,7 @@
           <input class="form-control" type="text" ng-model="csv.writeKey" ng-required></input>
         </div>
         <div class="form-group col-lg-6">
-          <label>Select a csv file:</label>
+          <label id="csvi">Select a csv file:</label>
           <input type="file" id="fileInput">
         </div>
 
@@ -47,7 +113,7 @@
 
         <div class="form-group col-lg-12" ng-show="csv.array.length != 0">
           <hr>
-          <table style="min-width: 600px">
+          <table style="min-width: 500px; margin: 0 auto;">
             <thead>
               <tr style="font-weight: bold">
                 <!-- Headers go here -->
