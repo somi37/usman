@@ -77,7 +77,12 @@
     text-align: left;
    }
   
-
+footer{
+text-align: right;
+position: relative;
+margin-right: 90px;
+opacity: 0.3;
+}
     
   </style>
 </head>
@@ -123,8 +128,8 @@
                 </td>
               </tr>
             </thead>
-            <tbody>
-              <tr ng-repeat="row in csv.array track by $index" ng-show="!$first" ng-if="$index < 4">
+            <tbody style="text-align: center;">
+              <tr ng-repeat="row in csv.array track by $index" ng-show="!$first" ng-if="$index < 4" >
                 <td ng-repeat="item in row track by $index" >
                   {{ item }}
                 </td>
@@ -138,16 +143,21 @@
 
     <div class="row-fluid" ng-show="csv.array.length != 0" style="text-align: center;">
       <div class="col-lg-12">
-      <!-- <pre ng-show="csv.JSONString.length != 0" >{{ csv.JSONString }}</pre> -->
+     <!-- <pre ng-show="csv.JSONString.length != 0" >{{ csv.JSONString }}</pre> -->
         <hr>
         <div class="btn btn-info" ng-click="csv.importJSON()" ng-disabled="csv.writeKey.length == 0" style="display: inline-block; text-align: center; font-size: 20pt;">
-          import
+          Import
           
             
-        </div>
+        </div><br><br>
       </div>
     </div>
   </div>
 </body>
 
+<footer>
+<p1>powered by Marketlytics</p1>  <br> 
+<p2>Original Open source: https://github.com/segmentio/segment-import</p2>
+
+</footer>
 </html>
